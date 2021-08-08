@@ -37,6 +37,7 @@ app.post('/', function (req, res) {
 // enter session -- Guest is P2
 // fetch(`localhost/session?session_id=${sessionId}`, { method: 'GET' })
 app.get('/session', function (req, res) {
+    console.log("P2 join")
     const sessionId = req.query.session_id;
     const Ama = sessions[sessionId]
     if (Ama == undefined) {
