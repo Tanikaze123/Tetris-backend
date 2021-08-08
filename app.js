@@ -40,8 +40,9 @@ app.post('/session', function (req, res) {
     console.log("P2 join")
     const sessionId = req.body.session_id;
     console.log(sessionId[sessionIdInput])
+    console.log("test")
     console.log(sessionId)
-    const Ama = sessions[sessionId]
+    const Ama = sessions[sessionId[sessionIdInput]]
     if (Ama == undefined) {
         return res.status(400).json({
             error: "Wrong"
