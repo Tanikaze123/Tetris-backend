@@ -99,7 +99,7 @@ app.get('/session/line', function (req, res, next) {
 });
 
 // set player's lines
-// fetch(`localhost/session?session_id=${sessionId}&player=${p}`, { method: 'PUT' })
+// fetch(`localhost/session?session_id=${sessionId}&player=${p}&lines=${lines}`, { method: 'PUT' })
 app.put('/session/setLine', function (req, res, next) {
     const sessionId = req.query.session_id;
     const Ama = sessions[sessionId]
