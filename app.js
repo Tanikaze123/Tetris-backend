@@ -23,8 +23,6 @@ const sessions = {};
 
 const Ama = require('./logic/ama');
 
-// fetch('http://localhost:8000/', { method: 'GET' })
-
 // session stuff -- Host is P1
 // fetch('localhost', { method: 'POST' })
 app.post('/', function (req, res) {
