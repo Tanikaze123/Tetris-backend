@@ -30,6 +30,7 @@ app.post('/', function (req, res) {
     sessions[sessionId] = new Ama() //error
     const AMA = sessions[sessionId]
     console.log(sessions)
+    console.log({ session_id: sessionId, "PlayerNo": 1 })
     res.status(201).send({ session_id: sessionId, "PlayerNo": 1 });
 });
 
