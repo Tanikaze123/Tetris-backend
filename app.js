@@ -39,6 +39,7 @@ app.post('/', function (req, res) {
 app.post('/session', function (req, res) {
     console.log("P2 join")
     const sessionId = req.body.session_id;
+    console.log(sessionId)
     const Ama = sessions[sessionId]
     if (Ama == undefined) {
         return res.status(400).json({
