@@ -27,8 +27,8 @@ const Ama = require('./logic/ama');
 // fetch('localhost', { method: 'POST' })
 app.post('/', function (req, res) {
     const sessionId = nanoid(10);
-    sessions[sessionId] = new Ama()
-    const Ama = sessions[sessionId]
+    sessions[sessionId] = new Ama() //error
+    const AMA = sessions[sessionId]
     console.log(sessions)
     res.status(201).send({ session_id: sessionId, "PlayerNo": 1 });
 });
