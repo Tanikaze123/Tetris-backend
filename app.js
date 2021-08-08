@@ -23,6 +23,8 @@ const sessions = {};
 
 const Ama = require('./logic/ama');
 
+// fetch('http://localhost:8000/', { method: 'GET' })
+
 // session stuff -- Host is P1
 // fetch('localhost', { method: 'POST' })
 app.post('/', function (req, res) {
@@ -34,6 +36,7 @@ app.post('/', function (req, res) {
 });
 
 // enter session -- Guest is P2
+// fetch(`localhost/session?session_id=${sessionId}`, { method: 'GET' })
 app.get('/session', function (req, res) {
     const sessionId = req.query.session_id;
     const Ama = sessions[sessionId]
@@ -46,7 +49,7 @@ app.get('/session', function (req, res) {
             error: "Full: 2/2"
         })
     }
-    res.json({ session_id: sessionId, "PlayerNo": 2});
+    return res.json({ session_id: sessionId, "PlayerNo": 2});
 });
 
 // set player status to ready
