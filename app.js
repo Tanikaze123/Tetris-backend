@@ -38,11 +38,9 @@ app.post('/', function (req, res) {
 // fetch(`localhost/session?session_id=${sessionId}`, { method: 'GET' })
 app.post('/session', function (req, res) {
     console.log("P2 join")
-    const sessionId = req.body.session_id;
-    console.log(sessionId[sessionIdInput])
-    console.log("test")
+    const sessionId = req.body.sessionIdInput;
     console.log(sessionId)
-    const Ama = sessions[sessionId[sessionIdInput]]
+    const Ama = sessions[sessionId]
     if (Ama == undefined) {
         return res.status(400).json({
             error: "Wrong"
