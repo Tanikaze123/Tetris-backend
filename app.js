@@ -21,7 +21,7 @@ app.use(express.json());
 
 const sessions = {};
 
-const Ama = require('../backend/logic/ama');
+const Ama = require('./logic/ama');
 
 // session stuff -- Host is P1
 // fetch('localhost', { method: 'POST' })
